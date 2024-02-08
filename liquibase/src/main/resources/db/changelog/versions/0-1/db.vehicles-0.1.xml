@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+
+    <changeSet id="1-create-vehicles-0.1" author="noura">
+        <createTable tableName="vehicles">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="type" type="varchar(255)" />
+            <column name="plate_no" type="varchar(255)" />
+            <column name="plate_type" type="varchar(255)" />
+            <column name="branch" type="varchar(255)" />
+            <column name="vehicle_brand" type="varchar(255)" />
+            <column name="model" type="varchar(255)" />
+            <column name="year" type="varchar(255)" />
+            <column name="serial_no" type="varchar(255)" />
+            <column name="vehicle_no" type="varchar(255)" />
+            <column name="color" type="varchar(255)" />
+            <column name="sec_color" type="varchar(255)" />
+            <column name="veh_state" type="varchar(255)" />
+            <column name="licence_end_dt" type="varchar(255)" />
+            <column name="checkup_end_dt" type="varchar(255)" />
+            <column name="checkup_state" type="varchar(255)" />
+            <column name="insurance_state" type="varchar(255)" />
+            <column name="current_user_id" type="int" />
+        </createTable>
+    </changeSet>
+    <changeSet id="2-current-user-vehicle-0.1" author="noura">
+        <addForeignKeyConstraint baseTableName="vehicles" baseColumnNames="current_user_id" constraintName="fk-vehicle_employee_user" referencedTableName="employee"
+                                 referencedColumnNames="id" />
+    </changeSet>
+
+</databaseChangeLog>

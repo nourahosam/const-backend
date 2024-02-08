@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.4.xsd">
+    <changeSet id="1-create_employee_0.1" author="noura">
+        <createTable tableName="employee">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="english_name" type="varchar(255)" />
+            <column name="arabic_name" type="varchar(255)" />
+            <column name="nationality" type="varchar(255)" />
+            <column name="contract_profession" type="varchar(255)" />
+            <column name="religion" type="varchar(255)" />
+            <column name="hiring_type" type="varchar(255)" />
+            <column name="email" type="varchar(255)" />
+            <column name="phone_no" type="varchar(255)" />
+            <column name="worker_type" type="varchar(255)" />
+            <column name="legal_entity" type="varchar(255)" />
+            <column name="job_titles" type="varchar(255)" />
+            <column name="contract_duration" type="varchar(255)" />
+            <column name="contract_end_dt" type="varchar(255)" />
+            <column name="iqama_profession" type="varchar(255)" />
+            <column name="aramco_id" type="varchar(255)" />
+            <column name="sec_id" type="varchar(255)" />
+            <column name="branch_name" type="varchar(255)" />
+            <column name="camp_location" type="varchar(255)" />
+            <column name="emp_type_id" type="int" />
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
